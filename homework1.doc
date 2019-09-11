@@ -1,0 +1,67 @@
+// наследование 
+public class ThisIsUser
+{
+    int BirthYear;
+    String Name;
+    String LastName;
+        public User(int BirthYear, String Name, String LastName) 
+    {
+        this.Name = Name;
+        this.LastName = LastName;
+		this.BirthYear = BirthYear;
+    }
+}
+
+public class Student extends ThisIsUser
+{
+    int ThisIsGroup;
+    public Student(int BirthYear, String Name, String LastName)
+	{
+         super(BirthYear, Name, LastName);
+    }
+    boolean isMyGroup(int g)
+	{
+        return g == ThisIsGroup; 
+    }
+} 
+
+
+// инкапсуляция
+class NoClass {
+    private String s = "Hello, Mykhail Gennadevich!";
+}
+public class testing {
+    
+    public static void main(String[] args) {
+        NoClass obj = new NoClass();
+        
+        System.out.println(obj.s);
+    }
+}
+
+// полиморфизм 
+
+public class Shape {
+public void draw() {
+// nothing happens
+		}
+	}
+public class Square extends Shape {
+	public void draw() {
+	System.out.println("Square");
+}
+}
+
+public class Сircle extends Shape {
+	public void draw() {
+	System.out.println("Circle");
+}
+}
+
+public class Triangle extends Shape {
+	public void draw() {
+	System.out.println("Triangle");
+}
+}
+Shape[] a = new Shape[]{new Shape(), new Triangle(), new Square(), new Сircle()};
+for(int i = 0; i < a.length; i++) { a[i].draw(); }
