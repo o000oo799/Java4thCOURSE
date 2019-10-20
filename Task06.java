@@ -1,30 +1,19 @@
-package lesson02.part02;
+package lesson02.part01;
 
 /**
- * Допишите код метода setName, чтобы с его помощью установить значение private String fullName равное значению локальной переменной String fullName.
+ * Расставить правильно (по другому) скобки, чтобы на экран вывелось число 382
  * <p>
  * <p>
  * Требования:
- * 1.	Класс Cat должен содержать только одну переменную fullName.
- * 2.	Переменная fullName должна иметь модификатор доступа private и тип String.
- * 3.	Класс Cat должен содержать только два метода setName и main.
- * 4.	Метод setName должен иметь локальную переменную fullName.
- * 5.	Метод setName класса Cat должен устанавливать значение глобальной переменной private String fullName равным локальной переменной fullName.
+ * 1.	Программа не должна считывать данные с клавиатуры.
+ * 2.	Метод main должен содержать только один вызов System.out.println.
+ * 3.	Последовательность цифр и арифметических операций изменять нельзя.
+ * 4.	Количество круглых скобок должно остаться прежним (2 открывающие и 2 закрывающие).
+ * 5.	Метод main должен выводить на экран число 382.
  */
 
 public class Task06 {
-
     public static void main(String[] args) {
-
-    }
-
-    public static class Cat {
-        private String fullName;
-
-        public void setName(String firstName, String lastName) {
-            String fullName = firstName + " " + lastName;
-        this.fullName=fullName;
-            //напишите тут ваш код
-        }
+        System.out.println((2 * 3) + 4 * 5 + (6 * 7));
     }
 }

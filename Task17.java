@@ -1,64 +1,31 @@
-package lesson02.part02;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package lesson02.part01;
 
 /**
- * Ввести с клавиатуры три целых числа. Определить, имеется ли среди них хотя бы одна пара равных между собой чисел.
- * Если такая пара существует, вывести на экран числа через пробел. Если все три числа равны между собой, то вывести все три.
- * Примеры:
- * а) при вводе чисел
- * 1
- * 2
- * 2
- * получим вывод
- * 2 2
+ * Ввести с клавиатуры число и имя, вывести на экран строку:
+ * «имя» захватит мир через «число» лет. Му-ха-ха!
+ * Пример: Вася захватит мир через 8 лет. Му-ха-ха!
  * <p>
- * б) при вводе чисел
- * 2
- * 2
- * 2
- * получим вывод
- * 2 2 2
+ * Последовательность вводимых данных имеет большое значение.
  * <p>
  * <p>
  * Требования:
- * 1.	Программа должна считывать числа c клавиатуры.
- * 2.	Программа должна содержать System.out.println() или System.out.print()
- * 3.	Если два числа равны между собой, необходимо вывести числа на экран.
- * 4.	Если все три числа равны между собой, необходимо вывести все три.
- * 5.	Если нет равных чисел, ничего не выводить.
+ * 1.	Программа должна выводить текст.
+ * 2.	Программа должна считывать данные с клавиатуры.
+ * 3.	Выведенный текст должен содержать введенное имя.
+ * 4.	Выведенный текст должен содержать введенное число.
+ * 5.	Выведенный текст должен полностью соответствовать заданию.
  */
+
+import java.io.*;
+import java.util.*;
 
 public class Task17 {
     public static void main(String[] args) throws Exception {
-
-                Scanner in = new Scanner(System.in);
-                List<Integer> numbers = new ArrayList<Integer>();
-                for (int i = 0; i < 3; i++) {
-                    System.out.println("введите число");
-                    numbers.add(in.nextInt());
-                }
-                if (numbers.get(0).equals(numbers.get(1)) && numbers.get(0).equals(numbers.get(2))) {
-                    for (int i = 0; i < 3; i++)
-                        System.out.print(numbers.get(i) + " ");
-                    System.exit(0);
-                }
-                for (int i = 0; i < 2; i++) {
-                    for (int j = 1; j < 3; j++) {
-                        if (numbers.get(i).equals(numbers.get(j))) {
-                            System.out.print(numbers.get(i) + " " + numbers.get(j));
-                            System.exit(0);
-                        }
-                    }
-                }
-            }
-        }
+        BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
+        String s = reader1.readLine();
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
+        String s1= reader2.readLine();
+        System.out.println(s + " захватит мир через "+s1+" лет");
 
     }
 }

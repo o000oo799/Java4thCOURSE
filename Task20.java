@@ -1,33 +1,34 @@
-package lesson02.part02;
+package lesson02.part01;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 /**
- * Ввести с клавиатуры три числа, и вывести их в порядке убывания. Выведенные числа должны быть разделены пробелом.
- *
- *
+ * Ввести с клавиатуры три имени, вывести на экран надпись:
+ * name1 + name2 + name3 = Чистая любовь, да-да!
+ * Пример: Вася + Ева + Анжелика = Чистая любовь, да-да!
+ * <p>
+ * <p>
  * Требования:
- * 1.	Программа должна считывать числа c клавиатуры.
- * 2.	Программа должна выводить числа на экран.
- * 3.	Программа должна выводить три числа разделенных пробелами.
- * 4.	Программа должна выводить числа в порядке убывания.
-*/
+ * 1.	Программа должна выводить текст.
+ * 2.	Программа должна считывать данные с клавиатуры.
+ * 3.	Выведенный текст должен содержать введенное имя name1.
+ * 4.	Выведенный текст должен содержать введенное имя name2.
+ * 5.	Выведенный текст должен содержать введенное имя name3.
+ * 6.	Выведенный тест должен полностью соответствовать заданию.
+ */
 
 public class Task20 {
     public static void main(String[] args) throws Exception {
-
-        Scanner in = new Scanner(System.in);
-        List<Double> numbers = new ArrayList<Double>();
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Введите число");
-            numbers.add(in.nextDouble());
-        }
-        numbers.sort(Comparator.reverseOrder());
-        for (int i = 0; i < 3; i++)
-            System.out.print(numbers.get(i) + " ");
+        InputStream inputStream = System.in;
+        Reader inputStreamReader = new InputStreamReader(inputStream);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String s = bufferedReader.readLine();
+        String s1=bufferedReader.readLine();
+        String s2=bufferedReader.readLine();
+        System.out.println(s+" "+s1+" "+s2+" = Чистая любовь, да-да!");
 
     }
 }

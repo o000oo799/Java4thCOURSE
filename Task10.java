@@ -1,36 +1,28 @@
-package lesson02.part02;
+package lesson02.part01;
 
 /**
- * Напишите метод checkInterval. Метод должен проверять попало ли целое число в интервал от 50 до 100
- * и сообщить результат на экран в следующем виде: "Число а не содержится в интервале." или "Число а содержится в интервале.",
- * где а - аргумент метода.
- * Пример для числа 112:
- * Число 112 не содержится в интервале.
- * Пример для числа 60:
- * Число 60 содержится в интервале.
+ * Реализуй метод public static void writeToConsole(String s), который добавляет к началу строки выражение "printing: "
+ * и выводит измененную строку на экран.
+ * Пример вывода для "Hello world!":
+ * printing: Hello world!
  * <p>
  * <p>
  * Требования:
- * 1.	Программа должна выводить текст на экран.
- * 2.	Метод main не должен вызывать System.out.println() или System.out.print().
- * 3.	Метод main должен вызывать метод checkInterval.
- * 4.	Метод checkInterval должен быть static void.
- * 5.	Метод checkInterval должен выводить текст на экран согласно заданию.
+ * 1.	Добавь метод writeToConsole, у которого аргумент имеет тип String.
+ * 2.	Метод writeToConsole должен быть void.
+ * 3.	Метод writeToConsole должен быть static.
+ * 4.	Метод writeToConsole должен быть public.
+ * 5.	Метод writeToConsole должен добавлять к началу строки "printing: " и выводить полученный результат на экран.
+ * 6.	Программа должна вывести "printing: Hello world!".
  */
 
 public class Task10 {
     public static void main(String[] args) {
-        checkInterval(60);
-        checkInterval(112);
-        checkInterval(10);
+        writeToConsole("Hello world!");
     }
 
-    public static void checkInterval(int a) {
-        if (a>=50 && a<=100)
-        {
-            System.out.println("Входит");
-        }
-        else System.out.println("не входит");
+    public static void writeToConsole(String s) {
+        //напишите тут ваш код
 
     }
 }

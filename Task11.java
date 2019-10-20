@@ -1,44 +1,23 @@
-package lesson02.part02;
+package lesson02.part01;
 
 /**
- * Напишите метод checkSeason. По номеру месяца, метод должен определить время года (зима, весна, лето, осень) и вывести на экран.
- * Пример для номера месяца 2:
- * зима
- * Пример для номера месяца 5:
- * весна
+ * Добавь метод public static int convertToSeconds(int hour) который будет конвертировать часы в секунды.
+ * Вызови его дважды в методе main с любыми параметрами. Результаты выведи на экран, каждый раз с новой строки.
  * <p>
  * <p>
  * Требования:
- * 1.	Программа должна выводить текст на экран.
- * 2.	Метод main не должен вызывать функцию System.out.println или System.out.print.
- * 3.	Метод main должен вызывать метод checkSeason.
- * 4.	Метод checkSeason должен быть static void, и иметь только один параметр int.
- * 5.	Метод checkSeason должен выводить текст на экран согласно заданию.
+ * 1.	Добавь метод convertToSeconds, он должен быть public static, возвращать и принимать int.
+ * 2.	Метод convertToSeconds должен переводить переданные часы в секунды.
+ * 3.	Метод main должен дважды вызывать метод convertToSeconds.
+ * 4.	Метод main должен выводить результаты вызова на экран, каждый раз с новой строки.
+ * 5.	Метод convertToSeconds не должен ничего выводить на экран.
  */
 
 public class Task11 {
-    public static void main(String[] args) {
-        checkSeason(12);
-        checkSeason(4);
-        checkSeason(7);
-        checkSeason(10);
-    }
+    //напишите тут ваш код
 
-    public static void checkSeason(int month) {
-        if(  month == 12||month <3)
-        {
-            System.out.println("зима");
-        }
-        else if (month >2 && month<6)
-        {
-            System.out.println("Весна");
-        }
-        else if (month>5 && month<9)
-        {
-            System.out.println("Лето");
-        }
-        else
-        System.out.println("ОСень");
+    public static void main(String[] args) {
+        //напишите тут ваш код
 
     }
 }

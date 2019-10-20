@@ -1,34 +1,32 @@
-package lesson02.part02;
+package lesson02.part01;
 
 /**
- * Написать код, чтобы правильно считалось количество созданных котов (count) и на экран выдавалось правильное их количество.
+ * Создать 5 зергов, 3 протосса и 4 террана.
+ * Дать им всем уникальные имена.
  * <p>
  * <p>
  * Требования:
- * 1.	Программа должна выводить текст на экран.
- * 2.	Нельзя изменять строку отвечающую за вывод в консоль.
- * 3.	Класс Cat должен содержать только одну переменную count.
- * 4.	Переменная count класса Cat должна быть статической, иметь модификатор доступа public, тип int и проинициализирована нулем.
- * 5.	В методе main должно быть только две проинициализированные переменные типа Cat.
- * 6.	Переменная count должна содержать актуальное количество созданных объектов-котов.
+ * 1.	Нельзя изменять классы Zerg, Protoss и Terran.
+ * 2.	Нужно создать 5 объектов типа Zerg и каждому из них дать свое имя.
+ * 3.	Нужно создать 3 объекта типа Protoss и каждому из них дать свое имя.
+ * 4.	Нужно создать 4 объекта типа Terran и каждому из них дать свое имя.
  */
 
 public class Task07 {
     public static void main(String[] args) {
-        Cat cat1 = new Cat();
-        {
-            Cat.count++;
-        }
+        //напишите тут ваш код
 
-        Cat cat2 = new Cat();
-        {
-            Cat.count++;
-        }
-
-        System.out.println("The cat count is " + Cat.count);
     }
 
-    public static class Cat {
-        public static int count = 0;
+    public static class Zerg {
+        public String name;
+    }
+
+    public static class Protoss {
+        public String name;
+    }
+
+    public static class Terran {
+        public String name;
     }
 }

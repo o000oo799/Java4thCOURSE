@@ -1,31 +1,30 @@
-package lesson02.part02;
+package lesson02.part01;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 /**
- * Ввести с клавиатуры четыре числа, и вывести максимальное из них. Если числа равны между собой, необходимо вывести любое.
+ * Ввести с клавиатуры имя и вывести надпись:
+ * name зарабатывает $5,000. Ха-ха-ха!
+ * Пример: Тимур зарабатывает $5,000. Ха-ха-ха!
  * <p>
  * <p>
  * Требования:
- * 1.	Программа должна считывать числа c клавиатуры.
- * 2.	Программа должна выводить число на экран.
- * 3.	Программа должна выводить на экран максимальное из четырёх чисел.
- * 4.	Если максимальных чисел несколько, необходимо вывести любое из них.
+ * 1.	Программа должна выводить текст.
+ * 2.	Программа должна считывать данные с клавиатуры.
+ * 3.	Выведенный текст должен содержать введенное имя.
+ * 4.	Выведенный текст должен полностью соответствовать заданию.
  */
 
 public class Task19 {
     public static void main(String[] args) throws Exception {
-        Scanner in = new Scanner(System.in);
-        List<Integer> numbers = new ArrayList<Integer>();
-        for (int i = 0; i < 4; i++) {
-            System.out.println("введите число");
-            numbers.add(in.nextInt());
-        }
-        numbers.sort(Comparator.naturalOrder());
-        System.out.println(numbers.get(3));
+        InputStream inputStream = System.in;
+        Reader inputStreamReader = new InputStreamReader(inputStream);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String s = bufferedReader.readLine();
+        System.out.println(s+" зарабатывает 5000$. Ха-ха-ха!");
 
     }
 }
